@@ -11,7 +11,7 @@ bash -c "$(curl --fail --show-error --silent --location https://raw.githubuserco
 zinit self-update
 ```
 ### ZSH completions
-[take github cli for example](https://cli.github.com/manual/gh_completion):  
+[take github cli completions for example](https://cli.github.com/manual/gh_completion):  
 
 Generate a _gh completion script and put it somewhere in your $fpath:  
 
