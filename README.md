@@ -10,6 +10,20 @@ chsh -s $(which zsh)
 bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
 zinit self-update
 ```
+### ZSH completions
+[take github cli for example](https://cli.github.com/manual/gh_completion):  
+
+Generate a _gh completion script and put it somewhere in your $fpath:  
+
+```
+gh completion -s zsh > ~/.local/share/zinit/completions/_gh
+```
+Ensure that the following is present in your ~/.zshrc:
+```
+autoload -U compinit
+compinit -i
+```
+Zsh version 5.7 or later is recommended.
 ## [Powerlevel10K theme](https://github.com/romkatv/powerlevel10k)
 Add ```zinit ice depth=1; zinit light romkatv/powerlevel10k``` to ~/.zshrc.
 ## Tmux common commands
