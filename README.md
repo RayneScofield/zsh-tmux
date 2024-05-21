@@ -28,6 +28,8 @@ Zsh version 5.7 or later is recommended.
 Add ```zinit ice depth=1; zinit light romkatv/powerlevel10k``` to ~/.zshrc.
 ## Tmux common commands
 ```
+prefix :      # command mode
+prefix ?      # all key shortcuts
 # sessions
 tmux new -s session-name
 tmux attach
