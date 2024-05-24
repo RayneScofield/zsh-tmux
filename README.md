@@ -28,6 +28,16 @@ compinit -i
 Zsh version 5.7 or later is recommended.
 ## [Powerlevel10K theme](https://github.com/romkatv/powerlevel10k)
 Add ```zinit ice depth=1; zinit light romkatv/powerlevel10k``` to ~/.zshrc.
+
+## Tmux plugin manager
+```
+git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
+```
+```
+prefix I      # install plugins
+prefix U      # update plugins
+prefix alt u  # uninstall plugins
+```
 ## Tmux common commands
 ```
 prefix :      # command mode
@@ -60,15 +70,7 @@ prefix z or m  # maximize pane
 prefix x       # kill pane
 prefix { or }  # swap panes
 ```
-## Tmux plugin manager
-```
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-```
-```
-prefix I      # install plugins
-prefix U      # update plugins
-prefix alt u  # uninstall plugins
-```
+
 ## Tmux vim mode
 ```
 prefix [      # enter into tmux vim mode
