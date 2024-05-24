@@ -77,7 +77,7 @@ alias ll='ls --color=tty -h --group-directories-first -A -l'
 alias sudo='sudo '
 alias c='clear'
 alias x='exit'
-alias cat='bat --paging=never'
+alias cat='bat -pp'
 
 # make fd-find link to fd command
 export PATH=$HOME/.local/bin:$PATH
