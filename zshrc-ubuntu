@@ -74,6 +74,9 @@ zstyle ':fzf-tab:complete:code:*' fzf-preview 'eza --tree --level=2 --color=alwa
 #alias ll='ls --color=tty -h --group-directories-first -A -l'
 # sudo without password
 alias sudo='sudo '
+alias c='clear'
+alias x='exit'
+alias cat='bat --paging=never'
 
 # make fd-find link to fd command
 export PATH=$HOME/.local/bin:$PATH
