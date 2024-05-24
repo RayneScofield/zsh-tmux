@@ -5,6 +5,8 @@ ZSH shell and tmux configuration
 sudo apt install zsh
 chsh -s $(which zsh)
 ```
+Note: install fd, fzf, ripgrep, bat, exa, zoxide as well
+Note: for ubuntu, fd is fd-find, bat is batcat and can alias fdfind to fd and alias batcat to cat
 ## [ZSH plugin manager "zinit"](https://github.com/zdharma-continuum/zinit)
 ```
 bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
