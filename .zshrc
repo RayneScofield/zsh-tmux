@@ -59,6 +59,7 @@ setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
 setopt hist_verify
+setopt no_nomatch
 
 # Completion styling
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
@@ -71,9 +72,10 @@ alias ll='ls --color=tty -h --group-directories-first -A -l'
 alias sudo='sudo '
 
 # Shell integrations
-export PATH=$HOME/.local/bin:$PATH
 eval "$(zoxide init --cmd cd  zsh)"
 
+# fd-find, batcat alias path
+export PATH=$HOME/.local/bin:$PATH
 
 # proxy
 export hostip=$(cat /etc/resolv.conf | grep "nameserver" | cut -f 2 -d " ")
