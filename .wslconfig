@@ -1,0 +1,11 @@
+[wsl2]
+memory=4GB
+networkingMode=mirrored
+firewall=true
+dnsTunneling=true
+autoProxy=true
+
+[experimental]
+autoMemoryReclaim=disabled  # gradual  | dropcache | disabled
+sparseVhd=true
+hostAddressLoopback=true
