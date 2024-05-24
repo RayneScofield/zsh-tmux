@@ -63,6 +63,7 @@ setopt hist_verify
 setopt no_nomatch
 
 # Completion styling
+zstyle ':completion::approximate:' max-error 1 numeric
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
@@ -70,8 +71,8 @@ zstyle ':fzf-tab:complete:z:*' fzf-preview 'eza -1 --color=always $realpath'
 zstyle ':fzf-tab:complete:code:*' fzf-preview 'eza --tree --level=2 --color=always $realpath'
 
 # Aliases
-#alias ls='ls --color'
-#alias ll='ls --color=tty -h --group-directories-first -A -l'
+alias ls='ls --color'
+alias ll='ls --color=tty -h --group-directories-first -A -l'
 # sudo without password
 alias sudo='sudo '
 alias c='clear'
@@ -81,10 +82,12 @@ alias cat='bat --paging=never'
 # make fd-find link to fd command
 export PATH=$HOME/.local/bin:$PATH
 
+# initial fzf keybindins and completion
+source "/usr/share/doc/fzf/examples/key-bindings.zsh"
+source "/usr/share/doc/fzf/examples/completion.zsh"
 
 # Shell integrations
-#eval "$(zoxide init --cmd cd zsh)"
-eval "$(zoxide init zsh)"
+eval "$(zoxide init --cmd cd zsh)"
 
 # proxy
 export hostip=$(cat /etc/resolv.conf | grep "nameserver" | cut -f 2 -d " ")
@@ -133,7 +136,5 @@ _fzf_comprun() {
 
 source "${HOME}/.alias.zsh"
 export FPATH="~/eza/completions/zsh:$FPATH"
-source "/usr/share/doc/fzf/examples/key-bindings.zsh"
-source "/usr/share/doc/fzf/examples/completion.zsh"
 
 PATH=~/.console-ninja/.bin:$PATH
